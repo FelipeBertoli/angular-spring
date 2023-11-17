@@ -1,0 +1,72 @@
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+<div class="recipe-container py-5 text-center">
+    <h1 class="recipe-title mb-5">Receita</h1>
+    <div class="row g-5 d-flex">
+        <form class="needs-validation">
+            <div class="item px-15e mb-4">
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                <h4 class="my-2">Medicamento</h4>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-1 px-15em">
+                    <div class="col-md-9">
+                        <span>Nome</span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <span>Quantidade</span>
+                        <input type="text" class="form-control">
+
+                    </div>
+                </div>
+                <div class="form-row g-3 px-5em">
+                    <div class="col-md-12 mb-3">
+                        <span>Prescrição</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item px-15e mb-4" *ngFor="let medication of medications">
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                <h4 class="my-2">Medicamento</h4>
+                    </div>
+                </div>
+
+                <div class="row g-3 mb-1 px-15em">
+                    <div class="col-md-9">
+                        <span>Nome</span>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <span>Quantidade</span>
+                        <input type="text" class="form-control">
+
+                    </div>
+                </div>
+                <div class="form-row g-3 px-5em">
+                    <div class="col-md-12 mb-3">
+                        <span>Prescrição</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12">
+                        <button type="button" class="btn-remove" onclick="closePopup()"><i class="fi fi-br-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="btn bg-primary btn-lg rounded-circle border border-dark" type="button" (click)="addMedication()"><i class="fi fi-br-plus text-white"></i></button>
+
+            <hr class="mt-4">
+            <button class="btn-record w-20 btn btn-primary btn-lg text-uppercase" type="submit">Gerar receita</button>
+
+        </form>
+    </div>
+</div>

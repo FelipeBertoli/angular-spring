@@ -1,0 +1,30 @@
+.record-container {
+    margin: 0 10em;
+    padding: 0 2.5em;
+    background-color: rgb(224, 223, 223);
+    border-radius: 1em;
+}
+
+.record-title::before {
+    content: "";
+    display: inline-block;
+    height: 0.1em;
+    vertical-align:middle;
+    width: 30%;
+    margin-right: 20px;
+    border-top: 2px solid rgb(0, 0, 0);
+}
+
+.record-title::after {
+    content: "";
+    display: inline-block;
+    height: 0.1em;
+    vertical-align:middle;
+    width: 30%;
+    margin-left: 20px;
+    border-top: 2px solid rgb(0, 0, 0);
+}
+
+.btn-record {
+    width: 50%;
+}

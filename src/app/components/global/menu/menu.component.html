@@ -1,0 +1,19 @@
+<div class="nav-ajust d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary text-align-center border border-dark border-right">
+    <a href="/" class="text-decoration-none text-align-center">
+        <span class="fs-2">Caduceus</span>
+    </a>
+    <span class="text-primary" style="text-transform: uppercase;">{{ role }}</span>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto">
+        <menu-button label="Pacientes" *ngIf="role == 'Médico'"></menu-button>
+        <menu-button label="Consultas" *ngIf="role == 'Médico'"></menu-button>
+        <menu-button label="Gerenciamento" *ngIf="role == 'Médico'"></menu-button>
+
+        <menu-button label="Marcar consultas" *ngIf="role == 'Paciente'"></menu-button>
+        <menu-button label="Suas Consultas" *ngIf="role == 'Paciente'"></menu-button>
+        <menu-button label="Seus atestados" *ngIf="role == 'Paciente'"></menu-button>
+        <menu-button label="Suas receitas" *ngIf="role == 'Paciente'"></menu-button>
+    </ul>
+    <hr>
+    <menu-dropdown></menu-dropdown>
+</div>
